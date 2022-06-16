@@ -7,10 +7,9 @@ class Solution {
         for(int i=1;i<nums.length;i++){
             
             sum= (sum>=0)? (sum+=nums[i]):(sum=nums[i]) ;
+            bestsum= Math.max(sum,bestsum);
             
-            if(sum>bestsum){
-                bestsum=sum;
-            }
+            
         }
    return bestsum;
     }
