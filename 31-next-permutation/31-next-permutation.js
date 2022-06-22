@@ -11,7 +11,6 @@ var nextPermutation = function(arr) {
     
     if(peak==-1){
         console.log(arr.reverse().join(" "))
-        return;
     }
     else{
         
@@ -23,16 +22,15 @@ var nextPermutation = function(arr) {
     
     
     console.log(arr.join(" "));
-        
     }      
   
 };
 function findpeak(arr,N){
       let rightpeak=-1;
-    for(let i=N-2;i>=0;i--){
+    for(let i=N-1;i>=0;i--){
         
-        if(arr[i]<arr[i+1]){
-            rightpeak=i;
+        if(arr[i]>arr[i-1]){
+            rightpeak=i-1;
             break;
         }
     }
@@ -55,7 +53,7 @@ function justgraterthanpeak(arr,peak,N){
 }
 
 function revers(arr,l,r){
-    while(l<=r){
+    while(l<r){
         
         let temp=arr[l];
         arr[l]=arr[r];
