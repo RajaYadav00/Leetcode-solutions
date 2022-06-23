@@ -137,7 +137,7 @@ class Tree
         while(!q.isEmpty()){
             
             Node currNode=q.remove();
-            arr.add(currNode.data);
+            arr.add(0,currNode.data);
             
             if(currNode.right!=null)q.add(currNode.right);
             if(currNode.left!=null)q.add(currNode.left);
@@ -145,7 +145,7 @@ class Tree
             
         }
        
-        Collections.reverse(arr);
+        // Collections.reverse(arr);
         return arr;
        
     }
