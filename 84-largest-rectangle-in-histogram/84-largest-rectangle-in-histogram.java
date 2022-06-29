@@ -6,9 +6,9 @@ class Solution {
         
         Stack<Integer> st=new Stack<>();
         
-        // st.push(heights.length - 1);
+        st.push(heights.length - 1);
         
-        // leftb[heights.length-1]=heights.length;
+        leftb[heights.length-1]=heights.length;
         
         for(int i=heights.length-1;i>=0;i--){
             
@@ -30,7 +30,7 @@ class Solution {
         
         Stack<Integer> st2=new Stack<>();
         
-        // rightb[0]=-1;
+        rightb[0]=-1;
         
         for(int i=0;i<heights.length;i++){
             
