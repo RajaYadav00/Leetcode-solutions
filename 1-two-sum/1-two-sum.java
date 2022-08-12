@@ -3,14 +3,13 @@ class Solution {
         
         int N=nums.length;
         int sume=0;
-        int[] ans=new int[2];
+        Map<Integer,Integer> map=new HashMap<>();
        for(int i=0;i<N;i++){
-           for(int j=i+1;j<N;j++){
-               
-               if(nums[i]+nums[j]==target){
-                   
-                   return new int[]{i,j};
-               }
+           int x=target-nums[i];
+           if(map.containsKey(x)){
+               return new int[]{i,map.get(x)};
+           }else{
+               map.put(nums[i],i);
            }
        }
         
